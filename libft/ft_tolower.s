@@ -1,23 +1,25 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_bzero.s                                         :+:      :+:    :+:    ;
+;    tolower.s                                          :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
 ;    By: bmikaeli <marvin@42.fr>                    +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
-;    Created: 2015/02/04 15:50:24 by bmikaeli          #+#    #+#              ;
-;    Updated: 2015/02/04 16:18:33 by bmikaeli         ###   ########.fr        ;
+;    Created: 2015/02/04 17:03:56 by bmikaeli          #+#    #+#              ;
+;    Updated: 2015/02/04 17:03:57 by bmikaeli         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
-global _ft_bzero
+global _ft_tolower
 	section .text
-	
-_ft_bzero:
-	cmp rsi, 0
-	je end
-	dec rsi
-	mov [rdi], byte 0
-	inc rdi
-	jmp _ft_bzero
+
+_ft_tolower :
+	cmp rdi, 65
+	jge _low
+	jmp end
+_low:
+ 	cmp rdi, 90
+ 	jg end
+ 	add rdi, 32
+ 	mov rax, rdi
 end:
-	ret
+ret

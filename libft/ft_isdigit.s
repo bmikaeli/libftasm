@@ -1,23 +1,25 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_bzero.s                                         :+:      :+:    :+:    ;
+;    ft_isdigit.s                                       :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
 ;    By: bmikaeli <marvin@42.fr>                    +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
-;    Created: 2015/02/04 15:50:24 by bmikaeli          #+#    #+#              ;
-;    Updated: 2015/02/04 16:18:33 by bmikaeli         ###   ########.fr        ;
+;    Created: 2015/02/04 16:53:59 by bmikaeli          #+#    #+#              ;
+;    Updated: 2015/02/04 16:54:03 by bmikaeli         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
-global _ft_bzero
+global _ft_isdigit
 	section .text
-	
-_ft_bzero:
-	cmp rsi, 0
-	je end
-	dec rsi
-	mov [rdi], byte 0
-	inc rdi
-	jmp _ft_bzero
+
+_ft_isdigit :
+	mov rax, 0
+	cmp rdi, 48
+	jge yes
+	jmp end
+yes:
+	cmp rdi, 57
+	jg end
+	mov rax, 1
 end:
 	ret

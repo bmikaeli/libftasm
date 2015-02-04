@@ -11,7 +11,8 @@
 #******************************************************************************#
 NAME = libfts.a
 
-SRC = ft_bzero.s
+SRC = ft_bzero.s ft_isalpha.s ft_isdigit.s ft_isprint.s ft_toupper.s\
+ft_tolower.s ft_isascii.s
 
 OBJ = $(SRC:.s=.o)
 

@@ -1,23 +1,25 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_bzero.s                                         :+:      :+:    :+:    ;
+;    ft_isprint.s                                       :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
 ;    By: bmikaeli <marvin@42.fr>                    +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
-;    Created: 2015/02/04 15:50:24 by bmikaeli          #+#    #+#              ;
-;    Updated: 2015/02/04 16:18:33 by bmikaeli         ###   ########.fr        ;
+;    Created: 2015/02/04 17:00:54 by bmikaeli          #+#    #+#              ;
+;    Updated: 2015/02/04 17:01:01 by bmikaeli         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
-global _ft_bzero
+	global _ft_isprint
 	section .text
-	
-_ft_bzero:
-	cmp rsi, 0
-	je end
-	dec rsi
-	mov [rdi], byte 0
-	inc rdi
-	jmp _ft_bzero
+
+	_ft_isprint :
+	mov rax, 0
+	cmp rdi, 32
+	jge yes
+	jmp end
+yes:
+	cmp rdi, 126
+	jg end
+	mov rax, 1
 end:
 	ret

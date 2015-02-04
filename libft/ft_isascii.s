@@ -1,23 +1,25 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_bzero.s                                         :+:      :+:    :+:    ;
+;    ft_isascii.s                                       :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
 ;    By: bmikaeli <marvin@42.fr>                    +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
-;    Created: 2015/02/04 15:50:24 by bmikaeli          #+#    #+#              ;
-;    Updated: 2015/02/04 16:18:33 by bmikaeli         ###   ########.fr        ;
+;    Created: 2015/02/04 17:28:52 by bmikaeli          #+#    #+#              ;
+;    Updated: 2015/02/04 17:28:53 by bmikaeli         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
-global _ft_bzero
+global _ft_isascii
 	section .text
-	
-_ft_bzero:
-	cmp rsi, 0
-	je end
-	dec rsi
-	mov [rdi], byte 0
-	inc rdi
-	jmp _ft_bzero
+
+_ft_isascii :
+	mov rax, 0
+	cmp rdi, 0
+	jge yes
+	jmp end
+yes:
+	cmp rdi, 127
+	jg end
+	mov rax, 1
 end:
 	ret
