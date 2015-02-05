@@ -6,7 +6,7 @@
 /*   By: bmikaeli <bmikaeli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/04 15:46:41 by bmikaeli          #+#    #+#             */
-/*   Updated: 2015/02/04 17:29:23 by bmikaeli         ###   ########.fr       */
+/*   Updated: 2015/02/05 16:51:29 by bmikaeli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,19 +39,19 @@ int     main(void)
    if (!c)
        printf("ft_isprint: OK !\n\n");//
 
-	   // /* FT_ISALPHA */
-	   // printf("*************** FT_ISALPHA ***************\n");
-	   // c = 0;
-	   // for ((i = -1000000); i < 1000000; i++)
-	   // {
-	   //     if (ft_isalpha(i) != isalpha(i))
-	   //     {
-	   //         printf("ft_isalpha error at i=%d [%d/%d]\n", i, ft_isalpha(i), isalpha(i));
-	   //         c++;
-	   //     }
-	   // }
-	   // if (!c)
-	   //     printf("ft_isalpha: OK !\n\n");//
+	   /* FT_ISALPHA */
+	   printf("*************** FT_ISALPHA ***************\n");
+	   c = 0;
+	   for ((i = -1000000); i < 1000000; i++)
+	   {
+	       if (ft_isalpha(i) != isalpha(i))
+	       {
+	           printf("ft_isalpha error at i=%d [%d/%d]\n", i, ft_isalpha(i), isalpha(i));
+	           c++;
+	       }
+	   }
+	   if (!c)
+	       printf("ft_isalpha: OK !\n\n");//
 
 //    /* FT_ISDIGIT */
   printf("*************** FT_ISDIGIT ***************\n");
@@ -82,18 +82,18 @@ int     main(void)
        printf("ft_isascii: OK !\n\n");//
 
 //    /* FT_ISALNUM */
-//    printf("*************** FT_ISALNUM ***************\n");
-//    c = 0;
-//    for ((i = -1000000); i < 1000000; i++)
-//    {
-//        if (ft_isalnum(i) != isalnum(i))
-//        {
-//            printf("ft_isalnum error at i=%d [%d/%d]\n", i, ft_isalnum(i), isalnum(i));
-//            c++;
-//        }
-//    }
-//    if (!c)
-//        printf("ft_isalnum: OK !\n\n");//
+   printf("*************** FT_ISALNUM ***************\n");
+   c = 0;
+   for ((i = -1000000); i < 1000000; i++)
+   {
+       if (ft_isalnum(i) != isalnum(i))
+       {
+           printf("ft_isalnum error at i=%d [%d/%d]\n", i, ft_isalnum(i), isalnum(i));
+           c++;
+       }
+   }
+   if (!c)
+       printf("ft_isalnum: OK !\n\n");//
 
 //    /* FT_TOUPPER */
    printf("*************** FT_TOUPPER ***************\n");
@@ -123,30 +123,30 @@ int     main(void)
    if (!c)
        printf("ft_tolower: OK !\n\n");//
 
-//    int     ret[2];
-//    /* FT_PUTS */
-//    printf("*************** FT_PUTS ***************\n");
-//    c = 0;
-//    if ((ret[0] = ft_puts("ft_puts: Hello")) != (ret[1] = puts("puts: Hello")))
-//    {
-//        printf("ft_puts error [%d/%d]\n", ret[0], ret[1]);
-//        c++;
-//    }
-//    if ((ret[0] = ft_puts("")) != (ret[1] = puts("")))
-//    {
-//        printf("ft_puts error [%d/%d]\n", ret[0], ret[1]);
-//        c++;
-//    }
-//    if (!c)
-//        printf("ft_puts: OK !\n\n");//
+   int     ret[2];
+   /* FT_PUTS */
+   printf("*************** FT_PUTS ***************\n");
+   c = 0;
+   if ((ret[0] = ft_puts("ft_puts: Hello")) != (ret[1] = puts("puts: Hello")))
+   {
+       printf("ft_puts error [%d/%d]\n", ret[0], ret[1]);
+       c++;
+   }
+   if ((ret[0] = ft_puts("")) != (ret[1] = puts("")))
+   {
+       printf("ft_puts error [%d/%d]\n", ret[0], ret[1]);
+       c++;
+   }
+   if (!c)
+       printf("ft_puts: OK !\n\n");//
 
-//    char    str[20] = "Hello";
-//    /* FT_STRCAT */
-//    printf("*************** FT_STRCAT ***************\n");
-//    printf("%p\n", str);
-//    printf("\"Hello\" + \" world !\": %s\n", ft_strcat(str, " world !"));
-//    printf("\"Hello world !\" + \"\": %s\n", ft_strcat(str, ""));
-//    printf("%p\n\n", str);//
+   char    str[20] = "Hello";
+   /* FT_STRCAT */
+   printf("*************** FT_STRCAT ***************\n");
+   printf("%p\n", str);
+   printf("\"Hello\" + \" world !\": %s\n", ft_strcat(str, " world !"));
+   printf("\"Hello world !\" + \"\": %s\n", ft_strcat(str, ""));
+   printf("%p\n\n", str);//
 
     char    str2[14] = "Hello world !";
     /* FT_BZERO */
@@ -170,30 +170,30 @@ int     main(void)
     printf("%p\n\n", str2);//
 
 //    /* FT_STRLEN */
-//    printf("*************** FT_STRLEN ***************\n");
-//    c = 0;
-//    if (ft_strlen(str) != strlen(str))
-//    {
-//        printf("ft_strlen error [%ld/%ld]\n", ft_strlen(str), strlen(str));
-//        c++;
-//    }
-//    if (ft_strlen(str2) != strlen(str2))
-//    {
-//        printf("ft_strlen error [%ld/%ld]\n", ft_strlen(str2), strlen(str2));
-//        c++;
-//    }
-//    if (ft_strlen("1") != strlen("1"))
-//    {
-//        printf("ft_strlen error [%ld/%ld]\n", ft_strlen("1"), strlen("1"));
-//        c++;
-//    }
-//    if (ft_strlen("\0") != strlen("\0"))
-//    {
-//        printf("ft_strlen error [%ld/%ld]\n", ft_strlen("\0"), strlen("\0"));
-//        c++;
-//    }
-//    if (!c)
-//        printf("ft_strlen: OK !\n\n");//
+   printf("*************** FT_STRLEN ***************\n");
+   c = 0;
+   if (ft_strlen(str) != strlen(str))
+   {
+       printf("ft_strlen error [%ld/%ld]\n", ft_strlen(str), strlen(str));
+       c++;
+   }
+   if (ft_strlen(str2) != strlen(str2))
+   {
+       printf("ft_strlen error [%ld/%ld]\n", ft_strlen(str2), strlen(str2));
+       c++;
+   }
+   if (ft_strlen("1") != strlen("1"))
+   {
+       printf("ft_strlen error [%ld/%ld]\n", ft_strlen("1"), strlen("1"));
+       c++;
+   }
+   if (ft_strlen("\0") != strlen("\0"))
+   {
+       printf("ft_strlen error [%ld/%ld]\n", ft_strlen("\0"), strlen("\0"));
+       c++;
+   }
+   if (!c)
+       printf("ft_strlen: OK !\n\n");//
 
 //    char    str3[14] = "Hello world !";
 //    /* FT_MEMSET */

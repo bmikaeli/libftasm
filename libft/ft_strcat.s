@@ -1,35 +1,33 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_isalpha.s                                       :+:      :+:    :+:    ;
+;    ft_strcat.s                                        :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
 ;    By: bmikaeli <marvin@42.fr>                    +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
-;    Created: 2015/02/04 16:26:09 by bmikaeli          #+#    #+#              ;
-;    Updated: 2015/02/04 16:27:10 by bmikaeli         ###   ########.fr        ;
+;    Created: 2015/02/05 11:29:27 by bmikaeli          #+#    #+#              ;
+;    Updated: 2015/02/05 11:29:29 by bmikaeli         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
-global _ft_isalpha
+global _ft_strcat
 	section .text
 
-_ft_isalpha :
-	mov rax, 0
-	cmp rdi, 65
-	jge yesmin
-	jmp end
-yesmin:
-	mov rax, 1
-	cmp rdi, 90
-	jg yesmaj
-	jmp end
-yesmaj:
-	mov rax, 0
-	cmp rdi, 97
-	jge again
-	jmp end
-again:
-	cmp rdi, 122
-	jg end
-	mov rax, 1
+_ft_strcat :
+	mov rax, rdi
+
+first:
+	cmp [rdi], byte 0
+	je next
+	inc rdi
+	jmp first
+
+next:
+	cmp [rsi], byte 0
+	je end
+	mov r11, [rsi]
+	mov [rdi], r11
+	inc rsi
+	inc rdi
+	jmp next
 end:
 	ret

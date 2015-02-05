@@ -6,7 +6,7 @@
 /*   By: bmikaeli <bmikaeli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/04 15:47:23 by bmikaeli          #+#    #+#             */
-/*   Updated: 2015/02/04 17:28:35 by bmikaeli         ###   ########.fr       */
+/*   Updated: 2015/02/05 17:38:13 by bmikaeli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,8 @@ int ft_isprint(int c);
 int ft_tolower(int c);
 int ft_toupper(int c);
 int ft_isascii(int c);
+int ft_isalnum(int c);
+char * ft_strcat(char *s1, char *s2);
+int ft_puts(const char *str);
+size_t ft_strlen(const char *str);
 #endif

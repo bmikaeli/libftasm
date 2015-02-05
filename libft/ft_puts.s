@@ -1,35 +1,29 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_isalpha.s                                       :+:      :+:    :+:    ;
+;    puts.s                                             :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
 ;    By: bmikaeli <marvin@42.fr>                    +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
-;    Created: 2015/02/04 16:26:09 by bmikaeli          #+#    #+#              ;
-;    Updated: 2015/02/04 16:27:10 by bmikaeli         ###   ########.fr        ;
+;    Created: 2015/02/05 12:37:48 by bmikaeli          #+#    #+#              ;
+;    Updated: 2015/02/05 12:37:49 by bmikaeli         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
-global _ft_isalpha
+global _ft_puts
 	section .text
 
-_ft_isalpha :
-	mov rax, 0
-	cmp rdi, 65
-	jge yesmin
-	jmp end
-yesmin:
-	mov rax, 1
-	cmp rdi, 90
-	jg yesmaj
-	jmp end
-yesmaj:
-	mov rax, 0
-	cmp rdi, 97
-	jge again
-	jmp end
-again:
-	cmp rdi, 122
-	jg end
-	mov rax, 1
+_ft_puts :
+	mov r8, rdi
+suite:
+	cmp [r8], byte 0
+	je end
+	mov rdi, 1
+	mov rsi, r8
+	mov rdx, 1
+	mov rax, 0x2000004
+	syscall
+	inc r8
+	jmp suite
 end:
+	mov rax, 10
 	ret

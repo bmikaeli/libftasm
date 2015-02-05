@@ -9,10 +9,10 @@
 ;    Updated: 2015/02/04 17:01:01 by bmikaeli         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
-	global _ft_isprint
+global _ft_isprint
 	section .text
 
-	_ft_isprint :
+_ft_isprint :
 	mov rax, 0
 	cmp rdi, 32
 	jge yes
