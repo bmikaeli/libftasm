@@ -6,7 +6,7 @@
 /*   By: bmikaeli <bmikaeli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/04 15:47:23 by bmikaeli          #+#    #+#             */
-/*   Updated: 2015/02/05 17:38:13 by bmikaeli         ###   ########.fr       */
+/*   Updated: 2015/02/06 13:36:33 by bmikaeli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <unistd.h>
 
 void ft_bzero(void *s, size_t size);
+void ft_memset(void *s, int c, size_t size);
 int ft_isalpha(int c);
 int ft_isdigit(int c);
 int ft_isprint(int c);

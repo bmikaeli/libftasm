@@ -6,7 +6,7 @@
 /*   By: bmikaeli <bmikaeli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/04 15:46:41 by bmikaeli          #+#    #+#             */
-/*   Updated: 2015/02/05 16:51:29 by bmikaeli         ###   ########.fr       */
+/*   Updated: 2015/02/06 13:41:12 by bmikaeli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -195,26 +195,26 @@ int     main(void)
    if (!c)
        printf("ft_strlen: OK !\n\n");//
 
-//    char    str3[14] = "Hello world !";
-//    /* FT_MEMSET */
-//    printf("*************** FT_MEMSET ***************\n");
-//    printf("%p\n", str3);
-//    printf("[%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c]\n",
-//            str3[0], str3[1], str3[2], str3[3], str3[4], str3[5], str3[6],
-//            str3[7], str3[8], str3[9], str3[10], str3[11], str3[12], str3[13]);
-//    ft_memset(str3, 'X', 0);
-//    printf("[%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c]\n",
-//            str3[0], str3[1], str3[2], str3[3], str3[4], str3[5], str3[6],
-//            str3[7], str3[8], str3[9], str3[10], str3[11], str3[12], str3[13]);
-//    ft_memset(str3, 'X', 6);
-//    printf("[%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c]\n",
-//            str3[0], str3[1], str3[2], str3[3], str3[4], str3[5], str3[6],
-//            str3[7], str3[8], str3[9], str3[10], str3[11], str3[12], str3[13]);
-//    ft_memset(str3, 'X', 13);
-//    printf("[%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c]\n",
-//            str3[0], str3[1], str3[2], str3[3], str3[4], str3[5], str3[6],
-//            str3[7], str3[8], str3[9], str3[10], str3[11], str3[12], str3[13]);
-//    printf("%p\n\n", str3);//
+   char    str3[14] = "Hello world !";
+   /* FT_MEMSET */
+   printf("*************** FT_MEMSET ***************\n");
+   printf("%p\n", str3);
+   printf("[%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c]\n",
+           str3[0], str3[1], str3[2], str3[3], str3[4], str3[5], str3[6],
+           str3[7], str3[8], str3[9], str3[10], str3[11], str3[12], str3[13]);
+   ft_memset(str3, 'X', 0);
+   printf("[%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c]\n",
+           str3[0], str3[1], str3[2], str3[3], str3[4], str3[5], str3[6],
+           str3[7], str3[8], str3[9], str3[10], str3[11], str3[12], str3[13]);
+   ft_memset(str3, 'X', 6);
+   printf("[%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c]\n",
+           str3[0], str3[1], str3[2], str3[3], str3[4], str3[5], str3[6],
+           str3[7], str3[8], str3[9], str3[10], str3[11], str3[12], str3[13]);
+   ft_memset(str3, 'X', 13);
+   printf("[%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c]\n",
+           str3[0], str3[1], str3[2], str3[3], str3[4], str3[5], str3[6],
+           str3[7], str3[8], str3[9], str3[10], str3[11], str3[12], str3[13]);
+   printf("%p\n\n", str3);//
 
 //    char    str4[14] = "Hello world !";
 //    /* FT_MEMCPY */

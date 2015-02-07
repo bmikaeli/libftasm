@@ -27,10 +27,10 @@ $(LIBDIR)/$(LIB):
 		make -C $(LIBDIR)
 
 $(NAME): $(OBJ)
-		@gcc -o $(NAME) $(OBJ) $(CFLAGS) -I./$(LIBDIR) -L./$(LIBDIR) -lfts
+		@/usr/local/bin/gcc-4.9 -o $(NAME) $(OBJ) $(CFLAGS) -I./$(LIBDIR) -L./$(LIBDIR) -lfts
 
 %.o: %.c
-		gcc $(CFLAGS) -c $^ -I./$(LIBDIR)
+		/usr/local/bin/gcc-4.9 $(CFLAGS) -c $^ -I./$(LIBDIR)
 
 clean:
 		@make clean -C $(LIBDIR)
