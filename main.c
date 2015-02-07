@@ -6,7 +6,7 @@
 /*   By: bmikaeli <bmikaeli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/04 15:46:41 by bmikaeli          #+#    #+#             */
-/*   Updated: 2015/02/06 13:41:12 by bmikaeli         ###   ########.fr       */
+/*   Updated: 2015/02/07 14:05:45 by bmikaeli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -214,49 +214,55 @@ int     main(void)
    printf("[%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c]\n",
            str3[0], str3[1], str3[2], str3[3], str3[4], str3[5], str3[6],
            str3[7], str3[8], str3[9], str3[10], str3[11], str3[12], str3[13]);
+  ft_memset(str3, 'A', 13);
+   printf("[%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c]\n",
+           str3[0], str3[1], str3[2], str3[3], str3[4], str3[5], str3[6],
+           str3[7], str3[8], str3[9], str3[10], str3[11], str3[12], str3[13]);
    printf("%p\n\n", str3);//
 
-//    char    str4[14] = "Hello world !";
-//    /* FT_MEMCPY */
-//    printf("*************** FT_MEMCPY ***************\n");
-//    printf("%p\n", str4);
-//    printf("[%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c]\n",
-//            str4[0], str4[1], str4[2], str4[3], str4[4], str4[5], str4[6],
-//            str4[7], str4[8], str4[9], str4[10], str4[11], str4[12], str4[13]);
-//    ft_memcpy(str4, "Bonjour monde", 0);
-//    printf("[%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c]\n",
-//            str4[0], str4[1], str4[2], str4[3], str4[4], str4[5], str4[6],
-//            str4[7], str4[8], str4[9], str4[10], str4[11], str4[12], str4[13]);
-//    ft_memcpy(str4, "Bonjour monde", 5);
-//    printf("[%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c]\n",
-//            str4[0], str4[1], str4[2], str4[3], str4[4], str4[5], str4[6],
-//            str4[7], str4[8], str4[9], str4[10], str4[11], str4[12], str4[13]);
-//    ft_memcpy(str4, "Bonjour monde", 13);
-//    printf("[%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c]\n",
-//            str4[0], str4[1], str4[2], str4[3], str4[4], str4[5], str4[6],
-//            str4[7], str4[8], str4[9], str4[10], str4[11], str4[12], str4[13]);
-//    printf("%p\n\n", str4);//
+   char    str4[14] = "Hello world !";
+   /* FT_MEMCPY */
+   printf("*************** FT_MEMCPY ***************\n");
+   printf("%p\n", str4);
+   printf("[%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c]\n",
+           str4[0], str4[1], str4[2], str4[3], str4[4], str4[5], str4[6],
+           str4[7], str4[8], str4[9], str4[10], str4[11], str4[12], str4[13]);
+   ft_memcpy(str4, "Bonjour monde", 0);
+   printf("[%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c]\n",
+           str4[0], str4[1], str4[2], str4[3], str4[4], str4[5], str4[6],
+           str4[7], str4[8], str4[9], str4[10], str4[11], str4[12], str4[13]);
+   ft_memcpy(str4, "Bonjour monde", 5);
+   printf("[%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c]\n",
+           str4[0], str4[1], str4[2], str4[3], str4[4], str4[5], str4[6],
+           str4[7], str4[8], str4[9], str4[10], str4[11], str4[12], str4[13]);
+   ft_memcpy(str4, "Bonjour monde", 13);
+   printf("[%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c][%c]\n",
+           str4[0], str4[1], str4[2], str4[3], str4[4], str4[5], str4[6],
+           str4[7], str4[8], str4[9], str4[10], str4[11], str4[12], str4[13]);
+   printf("%p\n\n", str4);//
 
-//    char    str5[14] = "Hello world !";
-//    char    *str6;
-//    /* FT_STRDUP */
-//    printf("*************** FT_STRDUP ***************\n");
-//    printf("%p\n", str5);
-//    str6 = ft_strdup(str5);
-//    printf("%s\n", str5);
-//    printf("%s\n", str6);
-//    printf("%p\n", str5);
-//    printf("%p\n", str6);
-//    free(str6);//
+   char    str5[14] = "Hello world !";
+   char    *str6;
+   /* FT_STRDUP */
+   printf("*************** FT_STRDUP ***************\n");
+   printf("%p\n", str5);
+   str6 = ft_strdup(str5);
+   printf("%s\n", str5);
+   printf("%s\n", str6);
+   printf("%p\n", str5);
+   printf("%p\n", str6);
+   free(str6);//
 
-//    int     fd;
-//    /* FT_CAT */
-//    printf("*************** FT_CAT ***************\n");
-//    printf("Standard Input (CTRL + D to quit):\n");
-//    ft_cat(0);
-//    fd = open(FILE_TEST, O_RDONLY);
-//    ft_cat(fd);
-//    close(fd);
-//    ft_cat(-42);
+   int     fd;
+   /* FT_CAT */
+   printf("*************** FT_CAT ***************\n");
+   printf("Standard Input (CTRL + D to quit):\n");
+   ft_cat(0);
+   fd = open(FILE_TEST, O_RDONLY);
+   printf("Test on the file FILE_TEST (Makefile by default)\n");
+   ft_cat(fd);
+   close(fd);
+   printf("\nTest on bad FD\n");
+   ft_cat(-42);
     return (0);
 }
